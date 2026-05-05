@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background: #fff;
+  box-shadow: 5px 5px 5px rgb(220, 216, 216);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav input {
+  width: 250px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.icons2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons2 svg {
+  width: 100px;
+  height: 24px;
+  cursor: pointer;
+  fill: #000000;
+  transition: 0.2s;
+  
+}
+
+.icons2 svg:hover {
+  fill: #1877f2;
+  transform: scale(1.1);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  background-color: #e4e6eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  background-color: #d8dadf;
+  transform: scale(1.05);
+}
+
+.icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.container {
+  margin-top: 70px;
+}
+
+.left {
+  width: 25%;
+  height: calc(100vh - 70px);
+  position: fixed;
+  top: 70px;
+  left: 0;
+  padding: 20px;
+  background: #f0f2f5;
+  overflow-y: auto;
+}
+
+.right {
+  width: 25%;
+  height: calc(100vh - 70px);
+  position: fixed;
+  top: 70px;
+  right: 0;
+  padding: 20px;
+  background: #f0f2f5;
+  overflow-y: auto;
+
+}
+.mid {
+  width: 50%;
+  margin: 70px auto 0;
+  padding: 20px;
+   background: #f0f2f5;
+}
+.stories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;        
+  -ms-overflow-style: none;
+  padding-bottom: 20px;   
+}
+
+
+.stories::-webkit-scrollbar {
+  display: none;         
+}
+
+.scard {
+position: relative;   /* VERY IMPORTANT */
+  min-width: 150px;
+  height: 230px;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+.profile {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+.scard::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0,0,0,0.4), transparent);
+}
+.post-card {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+  background-image: url("logo.jpg");
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat; 
+  cursor: pointer;
+}
+
+
+.user-info h4 {
+  font-size: 14px;
+}
+
+.user-info span {
+  font-size: 12px;
+  color: gray;
+}
+
+.post-content {
+  margin: 10px 0;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.post-image {
+  width: 100%;
+  height: 300px;
+  background-image: url("/wall.webp");
+  background-size: cover;        
+  background-position: center;   
+  background-repeat: no-repeat; 
+  cursor: pointer;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.post-actions button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.post-actions button:hover {
+  background: #f0f2f5;
+  border-radius: 6px;
+}
+button {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  
+}
+.left button {
+  display: flex;
+  align-items: center;
+  gap: 10px;           
+  padding: 10px;       
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.left button:hover {
+  background-color: #e4e6eb;
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.left button img {
+  width: 30px;
+  height: 30px;
+
+}
+
+
+ details > .sum {
+
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  cursor: pointer;
+  background-color: #e6e6e7;
+  margin-bottom: 10px;
+ }
+ details > .sum::-webkit-details-marker {
+   display: none;
+ }
+ details > .sum:hover{
+  font-size: large;
+ }
+.create-post {
+  background: white;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.create-post .top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.create-post .top img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.create-post .top input {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: #f0f2f5;
+  outline: none;
+}
+
+.create-post hr {
+  margin: 12px 0;
+  border: none;
+  height: 1px;
+  background: #ddd;
+}
+
+.create-post .bottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.create-post .option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.create-post .option:hover {
+  background: #f0f2f5;
+}
+
+.create-post .icon {
+  font-size: 18px;
+}
+
+.green { color: #45bd62; }
+.blue { color: #1877f2; }
+.yellow { color: #f7b928; }
